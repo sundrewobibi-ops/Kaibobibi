@@ -1,0 +1,866 @@
+/* ============================================
+   GLOBAL STYLES & VARIABLES
+   ============================================ */
+
+:root {
+    --gold: #d4af37;
+    --dark: #1a1a1a;
+    --light: #f5f5f5;
+    --grey: #666666;
+    --white: #ffffff;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dark);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+/* ============================================
+   HEADER & NAVIGATION
+   ============================================ */
+
+header {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--gold);
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+    text-transform: uppercase;
+    position: relative;
+}
+
+nav a:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--gold);
+    transition: var(--transition);
+}
+
+nav a:hover:after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px 20px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+    background: linear-gradient(135deg, #f5f5f5 0%, #efefef 100%);
+    padding: 60px 40px;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--dark);
+    letter-spacing: -1px;
+}
+
+.hero-content .subtitle {
+    font-size: 18px;
+    color: var(--gold);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hero-content .bio {
+    font-size: 15px;
+    color: var(--grey);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.contact-quick {
+    font-size: 13px;
+    color: var(--dark);
+    line-height: 1.8;
+}
+
+.hero-profile-frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.hero-profile-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: var(--transition);
+}
+
+.hero-profile-frame:hover .hero-profile-img {
+    transform: scale(1.05);
+}
+
+.hero-image-fade-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+@media (max-width: 968px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content .subtitle {
+        font-size: 16px;
+    }
+}
+
+/* ============================================
+   PORTFOLIO SECTIONS
+   ============================================ */
+
+.portfolio-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px;
+}
+
+.portfolio-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--dark);
+    text-align: center;
+}
+
+.section-desc {
+    font-size: 15px;
+    color: var(--grey);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    line-height: 1.8;
+}
+
+/* ============================================
+   FILTER CONTROLS
+   ============================================ */
+
+.filter-controls {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+.filter-btn {
+    padding: 11px 26px;
+    border: 2px solid var(--gold);
+    background-color: transparent;
+    color: var(--gold);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.filter-btn:hover {
+    background-color: rgba(212, 175, 55, 0.08);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background-color: var(--gold);
+    color: var(--dark);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+/* ============================================
+   PORTFOLIO GRID & CARDS
+   ============================================ */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 28px;
+    margin-bottom: 50px;
+    auto-rows: 0;
+}
+
+.work-card {
+    background-color: var(--white);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+    cursor: pointer;
+    display: none;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.work-card.visible {
+    display: grid;
+}
+
+.work-card:hover {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    transform: translateY(-6px);
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    transition: var(--transition);
+    aspect-ratio: auto;
+}
+
+.work-card:hover .card-img {
+    transform: scale(1.08);
+}
+
+.card-meta {
+    padding: 24px;
+    background-color: var(--white);
+}
+
+.card-meta h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--dark);
+    line-height: 1.4;
+}
+
+.card-meta p {
+    font-size: 13px;
+    color: var(--grey);
+    line-height: 1.6;
+}
+
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.work-card.visible {
+    animation: fadeInCard 0.5s ease-out forwards;
+}
+
+/* ============================================
+   VIEW TOGGLE BUTTON
+   ============================================ */
+
+.view-toggle {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.view-toggle-btn {
+    padding: 14px 42px;
+    background-color: var(--gold);
+    color: var(--dark);
+    border: 2px solid var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.view-toggle-btn:hover {
+    background-color: var(--dark);
+    color: var(--gold);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(212, 175, 55, 0.3);
+}
+
+/* ============================================
+   LIGHTBOX / IMAGE MODAL
+   ============================================ */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.92);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+    overflow: auto;
+}
+
+.lightbox.open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    animation: slideUp 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.lightbox-image-wrapper {
+    position: relative;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 60vh;
+    overflow: hidden;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 60vh;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease-out;
+    transform-origin: center;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(212, 175, 55, 0.2);
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    font-size: 32px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.lightbox-close:hover {
+    background-color: var(--gold);
+    color: var(--dark);
+    transform: rotate(90deg);
+}
+
+/* ============================================
+   LIGHTBOX NAVIGATION ARROWS
+   ============================================ */
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(212, 175, 55, 0.2);
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.lightbox-prev {
+    left: -70px;
+}
+
+.lightbox-next {
+    right: -70px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background-color: var(--gold);
+    color: var(--dark);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-info {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    color: var(--white);
+    padding: 24px;
+    margin-top: 20px;
+    border-radius: 6px;
+    max-height: 120px;
+    overflow-y: auto;
+    border-left: 4px solid var(--gold);
+    width: 100%;
+    max-width: 600px;
+}
+
+.lightbox-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--gold);
+}
+
+.lightbox-info p {
+    font-size: 13px;
+    color: #e8e8e8;
+    line-height: 1.5;
+}
+
+.lightbox-counter {
+    font-size: 12px;
+    color: var(--gold);
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 60px 40px;
+    text-align: center;
+}
+
+footer h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--gold);
+}
+
+footer p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #d0d0d0;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.contact-box {
+    background-color: rgba(212, 175, 55, 0.1);
+    padding: 30px;
+    border-radius: 6px;
+    margin: 30px auto;
+    max-width: 500px;
+    border-left: 4px solid var(--gold);
+}
+
+.contact-box p {
+    margin: 12px 0;
+    font-size: 14px;
+}
+
+.contact-box a {
+    color: var(--gold);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+}
+
+.footer-note {
+    font-size: 12px;
+    color: #888;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 968px) {
+    .lightbox-prev,
+    .lightbox-next {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+        left: 15px;
+        right: auto;
+    }
+
+    .lightbox-next {
+        right: 15px;
+        left: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-section {
+        padding: 60px 20px;
+    }
+
+    .portfolio-section h2 {
+        font-size: 32px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .filter-controls {
+        gap: 8px;
+        margin: 30px 0;
+    }
+
+    .filter-btn {
+        padding: 9px 18px;
+        font-size: 11px;
+    }
+
+    .view-toggle-btn {
+        padding: 12px 32px;
+        font-size: 13px;
+    }
+
+    footer {
+        padding: 40px 20px;
+    }
+
+    footer h2 {
+        font-size: 28px;
+    }
+
+    .lightbox-content {
+        max-width: 95%;
+        max-height: 85%;
+    }
+
+    .lightbox-image-wrapper {
+        max-height: 50vh;
+    }
+
+    .lightbox-img {
+        max-height: 50vh;
+    }
+
+    .lightbox-close {
+        top: -35px;
+        width: 38px;
+        height: 38px;
+        font-size: 26px;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        left: 10px;
+        right: auto;
+    }
+
+    .lightbox-next {
+        right: 10px;
+        left: auto;
+    }
+
+    .lightbox-info {
+        padding: 16px;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-controls {
+        gap: 6px;
+    }
+
+    .filter-btn {
+        padding: 8px 14px;
+        font-size: 10px;
+        letter-spacing: 0.4px;
+    }
+
+    .card-meta {
+        padding: 16px;
+    }
+
+    .card-meta h3 {
+        font-size: 14px;
+    }
+
+    .card-meta p {
+        font-size: 12px;
+    }
+
+    footer h2 {
+        font-size: 22px;
+    }
+
+    .lightbox-content {
+        max-width: 100%;
+        max-height: 90%;
+    }
+
+    .lightbox-image-wrapper {
+        max-height: 40vh;
+    }
+
+    .lightbox-img {
+        max-height: 40vh;
+    }
+
+    .lightbox-close {
+        top: -30px;
+        width: 32px;
+        height: 32px;
+        font-size: 22px;
+    }
+
+    .lightbox-info {
+        padding: 16px;
+        font-size: 12px;
+        max-width: 95%;
+    }
+
+    .lightbox-info h3 {
+        font-size: 16px;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+        left: 8px;
+        right: auto;
+    }
+
+    .lightbox-next {
+        right: 8px;
+        left: auto;
+    }
+
+    .lightbox-counter {
+        font-size: 11px;
+    }
+}
+
+/* ============================================
+   INTERACTION / CLICKABILITY FIXES
+   - These rules improve thumbnail click behavior
+   - Ensure clicks on images reach the .work-card parent
+   - Support wide-banner utility classes that appeared
+   ============================================ */
+
+/* Make sure work-cards are stackable and focusable for accessibility */
+.work-card {
+    position: relative;      /* ensure z-index stacking context */
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    touch-action: manipulation;
+    outline: none;
+}
+
+/* If an image element intercepts the click, let the parent handle clicks:
+   allow pointer-events on meta text but let clicks on the image pass through
+   to the parent .work-card so the delegated click handler always receives them. */
+.work-card .card-img {
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Keep meta panel interactive (e.g., if user clicks the title/description) */
+.work-card .card-meta {
+    pointer-events: auto;
+}
+
+/* Visual focus styles when keyboard navigating (add tabindex="0" to cards in HTML if you want) */
+.work-card:focus-visible {
+    box-shadow: 0 0 0 4px rgba(212,175,55,0.12);
+    transform: translateY(-2px);
+}
+
+/* Wide/banner utility classes (HTML2/HTML3 used both 'wide' and 'wide-banner') */
+.work-card.wide,
+.work-card.wide-banner {
+    grid-column: span 2;
+}
+
+/* Respect responsiveness for wide items */
+@media (max-width: 900px) {
+    .work-card.wide,
+    .work-card.wide-banner {
+        grid-column: span 1;
+    }
+}
+
+/* Small helper to ensure nothing accidentally overlays work-cards (if you have absolute overlays elsewhere) */
+.portfolio-grid,
+.portfolio-section {
+    position: relative;
+}
+
+/* When lightbox is open, ensure it sits above everything */
+.lightbox {
+    z-index: 9999;
+}
+
+/* Reduce accidental text selection on mobile double-tap */
+.work-card, .work-card * {
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* End of style.css */
