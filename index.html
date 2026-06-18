@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Sunday Obibi | Portfolio (Randomized Gallery)</title>
+    <title>Sunday Obibi | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header (updated to point at the single gallery) -->
+    <!-- ===== HEADER ===== -->
     <header>
         <div class="logo">SUNDAY KAI OBIBI</div>
         <nav>
@@ -19,33 +19,60 @@
         </nav>
     </header>
 
-    <!-- HERO -->
+    <!-- ===== HERO ===== -->
     <section class="hero" id="about">
         <div class="hero-container">
             <div class="hero-content">
+                <div class="hero-badge">✦ Senior Graphic Designer</div>
                 <h1>Sunday Obibi</h1>
-                <p class="subtitle">Senior Graphic Designer & Visual Strategist</p>
-                <p class="bio">Bringing 6 years of elite graphic communication and media layout experience from Benin City, Edo State. Specializing in high-impact event visual identity, print production design, and dynamic campaign branding.</p>
-                <div class="contact-quick">
-                    📍 Benin City, Edo State &nbsp;|&nbsp; 
-                    📞 +234 703 460 6972 &nbsp;|&nbsp; 
-                    ✉️ akaiswag@yahoo.co.uk
+                <p class="subtitle">Visual Strategist &amp; Creative Consultant</p>
+                <p class="bio">Bringing 6 years of elite graphic communication and media layout experience from Benin City, Edo State, Nigeria. Specializing in high-impact event visual identity, print production design, and dynamic campaign branding.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">6+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Projects Delivered</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                </div>
+
+                <div class="hero-contact">
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span>Benin City, Edo State, Nigeria</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <a href="tel:+2347034606972">+234 703 460 6972</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <a href="mailto:akaiswag@yahoo.co.uk">akaiswag@yahoo.co.uk</a>
+                    </div>
                 </div>
             </div>
+
             <div class="hero-profile-frame">
-                <img src="Kai.jpeg" alt="Sunday Obibi Portrait" class="hero-profile-img" loading="lazy">
-                <div class="hero-image-fade-overlay"></div>
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-bg"></div>
+                    <img src="Kai.jpeg" alt="Sunday Obibi Portrait" class="hero-profile-img" loading="lazy">
+                    <div class="hero-image-ring"></div>
+                    <div class="hero-image-accent"></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- NOTE: original portfolio sections exist below in the HTML as the source of work-cards.
-         The script at the end will gather all .work-card elements, shuffle them, remove
-         these sections, and create a single randomized #gallery section. You don't need to
-         manually remove anything. -->
-
-    <!-- =================== ORIGINAL SECTIONS (cards) =================== -->
-    <!-- Section: Church (many cards included) -->
+    <!-- =================== ALL YOUR ORIGINAL SECTIONS =================== -->
+    
+    <!-- Section: Church -->
     <section class="portfolio-section" id="church">
         <h2>Church Program Flyers</h2>
         <p class="section-desc">Spiritual event flyers, prayer campaigns, and ministry media layouts designed to inspire and engage church communities.</p>
@@ -777,24 +804,63 @@
         </div>
     </section>
 
-    <!-- Footer (we will insert the single gallery above this via JS) -->
+    <!-- ===== FOOTER ===== -->
     <footer id="contact">
-        <h2>Hire Sunday "Kai" Obibi for Your Next Launch</h2>
-        <p>Currently accepting corporate branding retainers, publication layouts, and church ministry campaign visual direction contracts globally from Benin City, Nigeria.</p>
-        <div class="contact-box">
-            <p><strong>Direct Call/WhatsApp:</strong> <a href="tel:+2347034606972">+234 703 460 6972</a></p>
-            <p><strong>Professional Email:</strong> <a href="mailto:akaiswag@yahoo.co.uk">akaiswag@yahoo.co.uk</a></p>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h2>Sunday <span>Obibi</span></h2>
+                    <p class="footer-tagline">Designing visuals that inspire, connect, and transform.</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/sunday-obibi-65a452165" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="footer-cta">
+                    <p class="cta-text">Available for corporate branding retainers, publication layouts, and ministry campaign visual direction.</p>
+                    <a href="https://wa.me/2347034606972" target="_blank" class="btn-primary">Start a Project</a>
+                </div>
+            </div>
+
+            <div class="footer-middle">
+                <div class="footer-info">
+                    <h4>Contact</h4>
+                    <p><strong>Phone/WhatsApp:</strong> <a href="tel:+2347034606972">+234 703 460 6972</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:akaiswag@yahoo.co.uk">akaiswag@yahoo.co.uk</a></p>
+                    <p><strong>Location:</strong> Benin City, Edo State, Nigeria</p>
+                </div>
+                <div class="footer-info">
+                    <h4>Services</h4>
+                    <p>Brand Identity</p>
+                    <p>Print Design</p>
+                    <p>Event Graphics</p>
+                    <p>Campaign Strategy</p>
+                </div>
+                <div class="footer-info">
+                    <h4>Quick Links</h4>
+                    <p><a href="#about">About</a></p>
+                    <p><a href="#gallery">Gallery</a></p>
+                    <p><a href="#contact">Contact</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sunday Obibi. Crafted with purpose.</p>
+                <p class="footer-credit">Designed with <span class="heart">♥</span> in Benin City</p>
+            </div>
         </div>
-        <p class="footer-note">&copy; 2026 Sunday Obibi. Custom Handcrafted Design System Portfolio.</p>
     </footer>
 
-    <!-- libs -->
+    <!-- ===== SCRIPTS ===== -->
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
-    <!-- Combined script: shuffle + single gallery + Masonry init + delegated lightbox -->
     <script>
     document.addEventListener('DOMContentLoaded', () => {
+        // ===== PAGINATION SETTINGS =====
+        const IMAGES_PER_PAGE = 30;
+        let currentPage = 1;
+        let allCards = [];
+
         // 1. Gather all cards across sections
         const sourceCards = Array.from(document.querySelectorAll('.work-card'));
         if (!sourceCards.length) return;
@@ -807,44 +873,70 @@
             }
             return array;
         }
-        const shuffled = shuffle(sourceCards.slice());
+        allCards = shuffle(sourceCards.slice());
 
         // 3. Remove existing portfolio sections (heading + filters)
         document.querySelectorAll('.portfolio-section').forEach(sec => sec.remove());
 
-        // 4. Create single gallery section
+        // 4. Create single gallery section with pagination
         const gallerySection = document.createElement('section');
         gallerySection.className = 'portfolio-section';
         gallerySection.id = 'gallery';
         gallerySection.innerHTML = `
-            <h2>Gallery</h2>
-            <p class="section-desc">All works — randomized on each load. Click any image to preview.</p>
+            <div class="gallery-header">
+                <h2>Portfolio</h2>
+                <p class="section-desc">A curated selection of visual works — <span id="total-count">${allCards.length}</span> images total · <span id="pages-count">${Math.ceil(allCards.length / IMAGES_PER_PAGE)}</span> pages</p>
+            </div>
             <div class="portfolio-grid" data-section="gallery">
                 <div class="grid-sizer"></div>
             </div>
+            <div class="pagination-container" id="pagination"></div>
         `;
         // insert gallery before footer
         const footer = document.getElementById('contact') || document.querySelector('footer');
         footer.parentNode.insertBefore(gallerySection, footer);
 
         const grid = gallerySection.querySelector('.portfolio-grid');
+        const paginationContainer = document.getElementById('pagination');
 
-        // 5. Append shuffled cards to the new grid and mark visible
-        shuffled.forEach(card => {
-            // ensure visible and remove old filter-related classes
-            card.classList.add('visible');
-            if (card.parentNode) card.parentNode.removeChild(card);
-            grid.appendChild(card);
-        });
-
-        // 6. Init Masonry on the gallery
-        function initMasonryGrid(gridEl) {
-            if (!gridEl.querySelector('.grid-sizer')) {
-                const s = document.createElement('div');
-                s.className = 'grid-sizer';
-                gridEl.insertBefore(s, gridEl.firstChild);
+        // 5. Render page function
+        function renderPage(page) {
+            // Clear grid (keep sizer)
+            const sizer = grid.querySelector('.grid-sizer');
+            grid.innerHTML = '';
+            if (sizer) grid.appendChild(sizer);
+            else {
+                const newSizer = document.createElement('div');
+                newSizer.className = 'grid-sizer';
+                grid.appendChild(newSizer);
             }
 
+            const start = (page - 1) * IMAGES_PER_PAGE;
+            const end = Math.min(start + IMAGES_PER_PAGE, allCards.length);
+            const pageCards = allCards.slice(start, end);
+
+            pageCards.forEach(card => {
+                const clone = card.cloneNode(true);
+                clone.classList.add('visible');
+                grid.appendChild(clone);
+            });
+
+            // Update masonry
+            if (grid.msnry) {
+                imagesLoaded(grid, () => {
+                    grid.msnry.reloadItems();
+                    grid.msnry.layout();
+                });
+            } else {
+                initMasonryGrid(grid);
+            }
+
+            // Update pagination
+            renderPagination(page);
+        }
+
+        // 6. Init Masonry
+        function initMasonryGrid(gridEl) {
             const msnry = new Masonry(gridEl, {
                 itemSelector: '.work-card.visible',
                 columnWidth: '.grid-sizer',
@@ -852,13 +944,75 @@
                 gutter: 28,
                 transitionDuration: '0.36s'
             });
-
-            imagesLoaded(gridEl, () => msnry.layout());
             gridEl.msnry = msnry;
+            imagesLoaded(gridEl, () => msnry.layout());
         }
-        initMasonryGrid(grid);
 
-        // 7. Debounced relayout on window resize
+        // 7. Render pagination
+        function renderPagination(current) {
+            const totalPages = Math.ceil(allCards.length / IMAGES_PER_PAGE);
+            if (totalPages <= 1) {
+                paginationContainer.innerHTML = '';
+                return;
+            }
+
+            let html = '<div class="pagination">';
+            
+            // Previous button
+            html += `<button class="page-btn ${current === 1 ? 'disabled' : ''}" 
+                            onclick="goToPage(${current - 1})" 
+                            ${current === 1 ? 'disabled' : ''}>
+                        &larr; Prev
+                    </button>`;
+
+            // Page numbers
+            let startPage = Math.max(1, current - 2);
+            let endPage = Math.min(totalPages, current + 2);
+
+            if (startPage > 1) {
+                html += `<button class="page-btn" onclick="goToPage(1)">1</button>`;
+                if (startPage > 2) html += `<span class="page-dots">...</span>`;
+            }
+
+            for (let i = startPage; i <= endPage; i++) {
+                html += `<button class="page-btn ${i === current ? 'active' : ''}" 
+                                onclick="goToPage(${i})">${i}</button>`;
+            }
+
+            if (endPage < totalPages) {
+                if (endPage < totalPages - 1) html += `<span class="page-dots">...</span>`;
+                html += `<button class="page-btn" onclick="goToPage(${totalPages})">${totalPages}</button>`;
+            }
+
+            // Next button
+            html += `<button class="page-btn ${current === totalPages ? 'disabled' : ''}" 
+                            onclick="goToPage(${current + 1})" 
+                            ${current === totalPages ? 'disabled' : ''}>
+                        Next &rarr;
+                    </button>`;
+
+            html += '</div>';
+            paginationContainer.innerHTML = html;
+
+            // Update page count display
+            const pagesSpan = document.getElementById('pages-count');
+            if (pagesSpan) pagesSpan.textContent = totalPages;
+        }
+
+        // 8. Go to page function (global for onclick)
+        window.goToPage = function(page) {
+            const totalPages = Math.ceil(allCards.length / IMAGES_PER_PAGE);
+            if (page < 1 || page > totalPages) return;
+            currentPage = page;
+            renderPage(page);
+            // Scroll to gallery
+            document.getElementById('gallery').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        };
+
+        // 9. Initial render
+        renderPage(1);
+
+        // 10. Resize handler
         let rt;
         window.addEventListener('resize', () => {
             clearTimeout(rt);
@@ -867,16 +1021,12 @@
             }, 200);
         });
 
-        // 8. Delegated lightbox (full features)
+        // 11. Setup lightbox - CLEAN, NO LABELS
         setupDelegatedLightbox();
-
-        // 9. Jump to gallery anchor if the user clicked Gallery in nav
-        // (no-op here; nav links already point to #gallery)
     });
 
-    // Lightbox implementation (delegated)
+    // ===== LIGHTBOX - CLEAN, NO LABELS OR DESCRIPTIONS =====
     function setupDelegatedLightbox() {
-        // create lightbox DOM if missing
         if (!document.querySelector('.lightbox')) {
             const lightbox = document.createElement('div');
             lightbox.className = 'lightbox';
@@ -888,11 +1038,6 @@
                         <img class="lightbox-img" src="" alt="">
                     </div>
                     <button class="lightbox-next" aria-label="Next">&#10095;</button>
-                    <div class="lightbox-info">
-                        <h3></h3>
-                        <p></p>
-                        <div class="lightbox-counter"></div>
-                    </div>
                 </div>
             `;
             document.body.appendChild(lightbox);
@@ -900,10 +1045,6 @@
 
         const lightbox = document.querySelector('.lightbox');
         const lightboxImg = document.querySelector('.lightbox-img');
-        const lightboxImgWrapper = document.querySelector('.lightbox-image-wrapper');
-        const lightboxTitle = document.querySelector('.lightbox-info h3');
-        const lightboxDesc = document.querySelector('.lightbox-info p');
-        const lightboxCounter = document.querySelector('.lightbox-counter');
         const closeBtn = document.querySelector('.lightbox-close');
         const prevBtn = document.querySelector('.lightbox-prev');
         const nextBtn = document.querySelector('.lightbox-next');
@@ -911,10 +1052,9 @@
         let currentIndex = 0;
         let visibleList = [];
         let zoom = 1;
-        let touchDistance = 0;
 
+        // Use event delegation for dynamic cards
         document.body.addEventListener('click', (e) => {
-            // avoid opening when clicking navigation links
             if (e.target.closest('nav')) return;
             const card = e.target.closest('.work-card');
             if (!card) return;
@@ -928,25 +1068,18 @@
             if (currentIndex === -1) return;
 
             zoom = 1;
-            open(currentIndex);
+            openLightbox(currentIndex);
             lightbox.classList.add('open');
             document.body.style.overflow = 'hidden';
         });
 
-        function open(index) {
+        function openLightbox(index) {
             if (!visibleList.length) return;
             const card = visibleList[index];
             const img = card.querySelector('.card-img');
-            const meta = card.querySelector('.card-meta');
-            const title = meta && meta.querySelector('h3') ? meta.querySelector('h3').textContent : '';
-            const desc = meta && meta.querySelector('p') ? meta.querySelector('p').textContent : '';
-
             lightboxImg.src = img ? img.src : '';
             lightboxImg.alt = img ? img.alt : '';
             lightboxImg.style.transform = `scale(${zoom})`;
-            lightboxTitle.textContent = title;
-            lightboxDesc.textContent = desc;
-            lightboxCounter.textContent = `${index + 1} / ${visibleList.length}`;
 
             prevBtn.style.display = visibleList.length > 1 ? 'block' : 'none';
             nextBtn.style.display = visibleList.length > 1 ? 'block' : 'none';
@@ -956,14 +1089,14 @@
             ev.stopPropagation();
             currentIndex = (currentIndex - 1 + visibleList.length) % visibleList.length;
             zoom = 1;
-            open(currentIndex);
+            openLightbox(currentIndex);
         });
 
         nextBtn.addEventListener('click', (ev) => {
             ev.stopPropagation();
             currentIndex = (currentIndex + 1) % visibleList.length;
             zoom = 1;
-            open(currentIndex);
+            openLightbox(currentIndex);
         });
 
         closeBtn.addEventListener('click', () => {
@@ -983,30 +1116,27 @@
             if (e.key === 'ArrowLeft') {
                 currentIndex = (currentIndex - 1 + visibleList.length) % visibleList.length;
                 zoom = 1;
-                open(currentIndex);
+                openLightbox(currentIndex);
             } else if (e.key === 'ArrowRight') {
                 currentIndex = (currentIndex + 1) % visibleList.length;
                 zoom = 1;
-                open(currentIndex);
-            } else if (e.key === '+' || e.key === '=') {
-                e.preventDefault();
-                if (zoom < 3) { zoom += 0.2; lightboxImg.style.transform = `scale(${zoom})`; }
-            } else if (e.key === '-') {
-                e.preventDefault();
-                if (zoom > 0.5) { zoom -= 0.2; lightboxImg.style.transform = `scale(${zoom})`; }
+                openLightbox(currentIndex);
             } else if (e.key === 'Escape') {
                 lightbox.classList.remove('open');
                 document.body.style.overflow = 'auto';
             }
         });
 
-        lightboxImgWrapper.addEventListener('wheel', (e) => {
+        const wrapper = document.querySelector('.lightbox-image-wrapper');
+        wrapper.addEventListener('wheel', (e) => {
             e.preventDefault();
             if (e.deltaY < 0) { if (zoom < 3) { zoom += 0.2; lightboxImg.style.transform = `scale(${zoom})`; } }
             else { if (zoom > 0.5) { zoom -= 0.2; lightboxImg.style.transform = `scale(${zoom})`; } }
         }, { passive: false });
 
-        lightboxImgWrapper.addEventListener('touchstart', (e) => {
+        // Touch zoom for mobile
+        let touchDistance = 0;
+        wrapper.addEventListener('touchstart', (e) => {
             if (e.touches.length === 2) {
                 const dx = e.touches[0].clientX - e.touches[1].clientX;
                 const dy = e.touches[0].clientY - e.touches[1].clientY;
@@ -1014,7 +1144,7 @@
             }
         });
 
-        lightboxImgWrapper.addEventListener('touchmove', (e) => {
+        wrapper.addEventListener('touchmove', (e) => {
             if (e.touches.length === 2) {
                 e.preventDefault();
                 const dx = e.touches[0].clientX - e.touches[1].clientX;
