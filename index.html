@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunday Obibi | Portfolio (Merged)</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sunday Obibi | Portfolio (Randomized Gallery)</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Premium Navigation Header -->
+    <!-- Header (updated to point at the single gallery) -->
     <header>
         <div class="logo">SUNDAY KAI OBIBI</div>
         <nav>
             <a href="#about">About</a>
-            <a href="#church">Church Programs</a>
-            <a href="#birthday">Birthdays</a>
-            <a href="#event">Events</a>
-            <a href="#corporate">Corporate</a>
+            <a href="#gallery">Gallery</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!-- Asymmetric Split Luxury Hero Identity Section -->
+    <!-- HERO -->
     <section class="hero" id="about">
         <div class="hero-container">
             <div class="hero-content">
@@ -36,17 +33,22 @@
                 </div>
             </div>
             <div class="hero-profile-frame">
-                <img src="Kai.jpeg" alt="Sunday Obibi Portrait" class="hero-profile-img">
+                <img src="Kai.jpeg" alt="Sunday Obibi Portrait" class="hero-profile-img" loading="lazy">
                 <div class="hero-image-fade-overlay"></div>
             </div>
         </div>
     </section>
 
-    <!-- Section 1: Church Programs -->
+    <!-- NOTE: original portfolio sections exist below in the HTML as the source of work-cards.
+         The script at the end will gather all .work-card elements, shuffle them, remove
+         these sections, and create a single randomized #gallery section. You don't need to
+         manually remove anything. -->
+
+    <!-- =================== ORIGINAL SECTIONS (cards) =================== -->
+    <!-- Section: Church (many cards included) -->
     <section class="portfolio-section" id="church">
         <h2>Church Program Flyers</h2>
         <p class="section-desc">Spiritual event flyers, prayer campaigns, and ministry media layouts designed to inspire and engage church communities.</p>
-        
         <div class="filter-controls">
             <button class="filter-btn active" data-filter="all" data-section="church">All Works</button>
             <button class="filter-btn" data-filter="prayer" data-section="church">Prayer & Fasting</button>
@@ -55,9 +57,8 @@
         </div>
 
         <div class="portfolio-grid" data-section="church">
-
             <div class="work-card" data-category="prayer">
-                <img src="7 days days of prayer and fasting.jpg" alt="7 Days of Prayer and Fasting Flyer" class="card-img">
+                <img src="7 days days of prayer and fasting.jpg" alt="7 Days of Prayer and Fasting Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>7 Days of Prayer & Fasting</h3>
                     <p>Powerful spiritual identity asset balancing high-contrast background illumination with crisp, structured typography layout scales.</p>
@@ -65,7 +66,7 @@
             </div>
 
             <div class="work-card" data-category="spiritual-event">
-                <img src="2 sunday a.jpg" alt="Metamorphosis Program Flyer" class="card-img">
+                <img src="2 sunday a.jpg" alt="Metamorphosis Program Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Metamorphosis Event Design</h3>
                     <p>Vibrant spiritual theme design pairing strong 3D wooden lettering with fantasy elements like neon light fields and butterflies.</p>
@@ -73,7 +74,7 @@
             </div>
 
             <div class="work-card" data-category="spiritual-event">
-                <img src="Night of Bliss Benin 2026 e.jpg" alt="Night of Bliss Global Day of Prayer Flyer" class="card-img">
+                <img src="Night of Bliss Benin 2026 e.jpg" alt="Night of Bliss Global Day of Prayer Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Global Day of Prayer Banners</h3>
                     <p>Premium dark-gold layered main event design featuring professional background masking and multi-speaker arrangements.</p>
@@ -81,7 +82,7 @@
             </div>
 
             <div class="work-card" data-category="service">
-                <img src="easter special.jpg" alt="Easter Special He Is Risen Flyer" class="card-img">
+                <img src="easter special.jpg" alt="Easter Special He Is Risen Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Easter Special Asset</h3>
                     <p>Clean, airy typographic layout accented by realistic textured paper tears and brilliant high-key sunburst masking effects.</p>
@@ -89,7 +90,7 @@
             </div>
 
             <div class="work-card" data-category="service">
-                <img src="Healing and communion Service 2.jpg" alt="Healing and Communion Service Flyer" class="card-img">
+                <img src="Healing and communion Service 2.jpg" alt="Healing and Communion Service Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Healing & Communion Design</h3>
                     <p>Sophisticated golden ring aura concept art focusing on high-end facial blending and minimal typography hierarchy layout structures.</p>
@@ -97,7 +98,7 @@
             </div>
 
             <div class="work-card" data-category="spiritual-event">
-                <img src="the womb encounter 1.jpg" alt="The Womb Encounter Flyer" class="card-img">
+                <img src="the womb encounter 1.jpg" alt="The Womb Encounter Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>The Womb Encounter Media</h3>
                     <p>Multi-profile portrait layout combined within glowing circular frames, balanced with clear multinational broadcast timezone charts.</p>
@@ -105,7 +106,7 @@
             </div>
 
             <div class="work-card" data-category="service">
-                <img src="Jesus Alive 2.jpg" alt="Jesus Alive Outreach Flyer" class="card-img">
+                <img src="Jesus Alive 2.jpg" alt="Jesus Alive Outreach Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Jesus Alive Outreach</h3>
                     <p>Bold 3D gold extrusion typography mixed with national flag textures and digital QR code integrations for seamless registration tracking.</p>
@@ -113,7 +114,7 @@
             </div>
 
             <div class="work-card" data-category="service">
-                <img src="2.jpg" alt="Healing & Communion Quote Media" class="card-img">
+                <img src="2.jpg" alt="Healing & Communion Quote Media" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Inspirational Quote Art</h3>
                     <p>Minimalist high-key editorial layout focusing on clean typography spacing, background cloud overlays, and focused centerpiece speaker portrait framing.</p>
@@ -121,16 +122,15 @@
             </div>
 
             <div class="work-card" data-category="service">
-                <img src="week 2 tithe.jpg" alt="Tithe Service Slide" class="card-img">
+                <img src="week 2 tithe.jpg" alt="Tithe Service Slide" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Weekly Tithe Slide Layout</h3>
                     <p>High-visibility screen media graphic displaying account details cleanly using bold colored typography blocks over live assembly scene layers.</p>
                 </div>
             </div>
 
-            <!-- ====== Added from HTML2 (Church & Ministry Media) ====== -->
             <div class="work-card wide" data-category="service">
-                <img src="31st night service  Ebenezer primary school field.jpg" alt="New Year's Eve Service" class="card-img">
+                <img src="31st night service  Ebenezer primary school field.jpg" alt="New Year's Eve Service" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Christ Embassy - New Year's Eve Service Banner</h3>
                     <p>Large event banner for stadium/field announcements.</p>
@@ -138,7 +138,7 @@
             </div>
 
             <div class="work-card" data-category="service">
-                <img src="a gathering of kinds.jpg" alt="A Gathering of Kings" class="card-img">
+                <img src="a gathering of kinds.jpg" alt="A Gathering of Kings" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Wednesday Special - A Gathering of Kings</h3>
                     <p>Special midweek gathering poster design.</p>
@@ -146,7 +146,7 @@
             </div>
 
             <div class="work-card" data-category="service">
-                <img src="how i love him.jpg" alt="How I Love Him Youth Service Flyer" class="card-img">
+                <img src="how i love him.jpg" alt="How I Love Him Youth Service Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>How I Love Him - Youth Service</h3>
                     <p>Youth-focused service flyer with high-energy type treatment.</p>
@@ -154,7 +154,7 @@
             </div>
 
             <div class="work-card" data-category="service">
-                <img src="happy fathers dayzp 1.jpg" alt="Happy Father's Day Pastor Moses Olayemi" class="card-img">
+                <img src="happy fathers dayzp 1.jpg" alt="Happy Father's Day Pastor Moses Olayemi" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Father's Day Celebration Grid</h3>
                     <p>Father's Day composite grid poster.</p>
@@ -162,7 +162,7 @@
             </div>
 
             <div class="work-card" data-category="prayer">
-                <img src="END OF YEAR PRAYER.jpg" alt="End of the Year Prayer and Fasting" class="card-img">
+                <img src="END OF YEAR PRAYER.jpg" alt="End of the Year Prayer and Fasting" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>End of the Year Prayer & Fasting</h3>
                     <p>Campaign-style asset for seasonal prayer & fasting event.</p>
@@ -170,7 +170,7 @@
             </div>
 
             <div class="work-card" data-category="service">
-                <img src="grace connect.jpg" alt="Grace Connect Logo Display" class="card-img">
+                <img src="grace connect.jpg" alt="Grace Connect Logo Display" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Grace Connect - Brand Asset</h3>
                     <p>3D typography brand asset for a ministry network.</p>
@@ -178,7 +178,7 @@
             </div>
 
             <div class="work-card" data-category="service">
-                <img src="Central Missions 2 and Missions 2 and Missions 6.jpg" alt="ReachOut World Nigeria Live Match" class="card-img">
+                <img src="Central Missions 2 and Missions 2 and Missions 6.jpg" alt="ReachOut World Nigeria Live Match" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>ReachOut World - Broadcast Match</h3>
                     <p>Live broadcast graphics/layout.</p>
@@ -186,7 +186,7 @@
             </div>
 
             <div class="work-card" data-category="service">
-                <img src="campus ministry zone score board update 2.jpg" alt="Campus Ministry Zones Score Board" class="card-img">
+                <img src="campus ministry zone score board update 2.jpg" alt="Campus Ministry Zones Score Board" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Youths Aglow - Scoreboard Update</h3>
                     <p>Wide scoreboard banner layout for youth competition.</p>
@@ -194,7 +194,7 @@
             </div>
 
             <div class="work-card" data-category="service">
-                <img src="business seminar 2.jpg" alt="Special Business Seminar Flyer" class="card-img">
+                <img src="business seminar 2.jpg" alt="Special Business Seminar Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Special Business Seminar</h3>
                     <p>Professional seminar banner for church-led business events.</p>
@@ -202,7 +202,7 @@
             </div>
 
             <div class="work-card" data-category="service">
-                <img src="2024 and God didnt allowed it a.jpg" alt="Victory Event Flyer" class="card-img">
+                <img src="2024 and God didnt allowed it a.jpg" alt="Victory Event Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Victory Theme Flyer</h3>
                     <p>Bold victory-themed event poster.</p>
@@ -210,7 +210,7 @@
             </div>
 
             <div class="work-card" data-category="service">
-                <img src="advancement.jpg" alt="Month of Advancement" class="card-img">
+                <img src="advancement.jpg" alt="Month of Advancement" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Month of Advancement</h3>
                     <p>Motivational ministry program template.</p>
@@ -218,7 +218,7 @@
             </div>
 
             <div class="work-card" data-category="service">
-                <img src="all  member and stakeholders online endezvbous.jpg" alt="Online Rendezvous" class="card-img">
+                <img src="all  member and stakeholders online endezvbous.jpg" alt="Online Rendezvous" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Members & Stakeholders Online Rendezvous</h3>
                     <p>Online meeting invitation and header asset.</p>
@@ -226,7 +226,7 @@
             </div>
 
             <div class="work-card" data-category="service">
-                <img src="An hour of intense prayer.jpg" alt="An Hour of Intense Prayer" class="card-img">
+                <img src="An hour of intense prayer.jpg" alt="An Hour of Intense Prayer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>An Hour of Intense Prayer</h3>
                     <p>Focused prayer session visual identity.</p>
@@ -234,7 +234,7 @@
             </div>
 
             <div class="work-card" data-category="service">
-                <img src="avancing with the throne room.jpg" alt="Advancing with the Throne Room" class="card-img">
+                <img src="avancing with the throne room.jpg" alt="Advancing with the Throne Room" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Advancing With The Throne Room</h3>
                     <p>Event banner with dramatic composition.</p>
@@ -242,16 +242,15 @@
             </div>
 
             <div class="work-card" data-category="service">
-                <img src="banquet 8 by 10.jpg" alt="Banquet Seminar Flyer" class="card-img">
+                <img src="banquet 8 by 10.jpg" alt="Banquet Seminar Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>DBS Exchange Banquet Seminar</h3>
                     <p>8x10 banquet seminar poster layout.</p>
                 </div>
             </div>
 
-            <!-- ====== Added from HTML3 (church-related) ====== -->
             <div class="work-card" data-category="service">
-                <img src="love feast.jpg" alt="Love Feast Church Event Flyer" class="card-img">
+                <img src="love feast.jpg" alt="Love Feast Church Event Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Love Feast Event Flyer</h3>
                     <p>Church event flyer from HTML3 gallery.</p>
@@ -259,7 +258,7 @@
             </div>
 
             <div class="work-card" data-category="service">
-                <img src="lw arabic response center.jpg" alt="Loveworld Arabic Response Center Poster" class="card-img">
+                <img src="lw arabic response center.jpg" alt="Loveworld Arabic Response Center Poster" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Arabic Response Center Poster</h3>
                     <p>Ministry support centre poster.</p>
@@ -267,17 +266,12 @@
             </div>
 
         </div>
-
-        <div class="view-toggle">
-            <button class="view-toggle-btn" data-section="church">Show More</button>
-        </div>
     </section>
 
-    <!-- Section 2: Birthday & Celebration Flyers -->
+    <!-- Section: Birthday & Family -->
     <section class="portfolio-section" id="birthday">
         <h2>Birthday & Celebration Flyers</h2>
         <p class="section-desc">Bespoke celebration posters showcasing advanced masking, ornate frame compositing, photo-manipulation, and multi-image family collages.</p>
-        
         <div class="filter-controls">
             <button class="filter-btn active" data-filter="all" data-section="birthday">All Works</button>
             <button class="filter-btn" data-filter="birthdays" data-section="birthday">Birthdays</button>
@@ -286,9 +280,8 @@
         </div>
 
         <div class="portfolio-grid" data-section="birthday">
-
             <div class="work-card" data-category="families">
-                <img src="8 by 8 c_2.jpg" alt="Angelic Wings Crest Monogram Layout" class="card-img">
+                <img src="8 by 8 c_2.jpg" alt="Angelic Wings Crest Monogram Layout" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Ethereal Angelic Wings Concept</h3>
                     <p>High-end photo manipulation balancing majestic 3D wing assets with a custom gold star monogram crest over an atmospheric heavenly cloud layer.</p>
@@ -296,7 +289,7 @@
             </div>
 
             <div class="work-card" data-category="families">
-                <img src="8.7 by 6ft Triple Celebration.jpg" alt="Triple Celebration Backdrop Banner" class="card-img">
+                <img src="8.7 by 6ft Triple Celebration.jpg" alt="Triple Celebration Backdrop Banner" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>8.7ft x 6ft Triple Celebration Backdrop</h3>
                     <p>Large-format grand print layout featuring precise grid alignment for multi-portrait balance, regal baroque detailing, and seamless high-end mask compositing.</p>
@@ -304,7 +297,7 @@
             </div>
 
             <div class="work-card" data-category="families">
-                <img src="Arrival baby girl Samuel.jpg" alt="Arrival Baby Girl Samuel Commemorative Layout" class="card-img">
+                <img src="Arrival baby girl Samuel.jpg" alt="Arrival Baby Girl Samuel Commemorative Layout" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Baby Girl Samuel Commemorative Card</h3>
                     <p>Soft, luxury illustrative framing featuring ethereal light elements, clean soft-focus textures, and balanced announcement typography.</p>
@@ -312,7 +305,7 @@
             </div>
 
             <div class="work-card" data-category="families">
-                <img src="8 by 8 c.jpg" alt="8x8 Exhibition Banner Concept" class="card-img">
+                <img src="8 by 8 c.jpg" alt="8x8 Exhibition Banner Concept" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>8ft x 8ft Square Backdrop Layout</h3>
                     <p>Symmetric square canvas orchestration engineered for physical display visibility, crisp portrait alignment, and custom studio border detailing.</p>
@@ -320,7 +313,7 @@
             </div>
 
             <div class="work-card" data-category="families">
-                <img src="5 by 5.jpg" alt="5x5 Square Celebration Asset" class="card-img">
+                <img src="5 by 5.jpg" alt="5x5 Square Celebration Asset" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>5ft x 5ft Media Banner Variant</h3>
                     <p>A balanced, smaller dynamic print formulation utilizing localized color grading overlays and elegant high-contrast structural framing assets.</p>
@@ -328,7 +321,7 @@
             </div>
 
             <div class="work-card" data-category="birthdays">
-                <img src="Pst Rosemary 3.jpg" alt="Pastor Rosemary Olayemi Birthday Layout" class="card-img">
+                <img src="Pst Rosemary 3.jpg" alt="Pastor Rosemary Olayemi Birthday Layout" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Pst. Rosemary Olayemi High-Key Design</h3>
                     <p>Bright, ethereal celebration layout balancing a joyful primary portrait with a cascading multi-generational family photo cluster and gold ribbon flourishes.</p>
@@ -336,7 +329,7 @@
             </div>
 
             <div class="work-card" data-category="birthdays">
-                <img src="Pst Rosemary 4.jpg" alt="Pastor Rosemary Olayemi Regal Birthday Layout" class="card-img">
+                <img src="Pst Rosemary 4.jpg" alt="Pastor Rosemary Olayemi Regal Birthday Layout" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Pst. Rosemary Olayemi Luxury Studio Tribute</h3>
                     <p>A masterpiece of luxury framing, showcasing the centerpiece subject on a regal baroque armchair flanked by five intricate 3D gold-leaf portrait frames.</p>
@@ -344,7 +337,7 @@
             </div>
 
             <div class="work-card" data-category="birthdays">
-                <img src="Queen Amos Uka.jpg" alt="Sister Queen Amos Uka Birthday Flyer" class="card-img">
+                <img src="Queen Amos Uka.jpg" alt="Sister Queen Amos Uka Birthday Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Sister Queen Amos Uka Celebration</h3>
                     <p>High-contrast purple studio lighting concept highlighting a prominent foreground portrait paired with an ornate golden frame family insert.</p>
@@ -352,7 +345,7 @@
             </div>
 
             <div class="work-card" data-category="birthdays">
-                <img src="sam oboh.jpg" alt="Honourable Sam Oboh Birthday Flyer" class="card-img">
+                <img src="sam oboh.jpg" alt="Honourable Sam Oboh Birthday Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Hon. Sam Oboh Birthday Editorial</h3>
                     <p>Sophisticated corporate-editorial layout integrating clean gold and white sans-serif typography over a deep, architecturally rich backdrop.</p>
@@ -360,16 +353,15 @@
             </div>
 
             <div class="work-card" data-category="birthdays">
-                <img src="Zenita Olayemi.jpg" alt="Sister Zenita Olayemi Birthday Flyer" class="card-img">
+                <img src="Zenita Olayemi.jpg" alt="Sister Zenita Olayemi Birthday Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Sister Zenita Olayemi Studio Presentation</h3>
                     <p>Vibrant modern composition framing a dual-pose configuration (seated lifestyle vs. blended background portrait) accented with delicate 3D butterflies and neon glow text.</p>
                 </div>
             </div>
 
-            <!-- ====== Added from HTML2 (Birthday & Family) ====== -->
             <div class="work-card" data-category="birthdays">
-                <img src="Ivanna.jpg" alt="Ivanna 1st Birthday (ivanna.jpg)" class="card-img">
+                <img src="Ivanna.jpg" alt="Ivanna 1st Birthday" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Ivanna 1st Birthday Flyer</h3>
                     <p>Child's first birthday poster from HTML3 gallery.</p>
@@ -377,7 +369,7 @@
             </div>
 
             <div class="work-card" data-category="birthdays">
-                <img src="Tomisin Jacob 1.jpg" alt="Mrs. Tomisin Jacob Golden Birthday Flyer" class="card-img">
+                <img src="Tomisin Jacob 1.jpg" alt="Mrs. Tomisin Jacob Golden Birthday Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Mrs. Tomisin Jacob Golden Milestone</h3>
                     <p>Stunning, high-key sunburst design focusing on scale depth.</p>
@@ -385,7 +377,7 @@
             </div>
 
             <div class="work-card" data-category="birthdays">
-                <img src="Tomisin Jacob 2.jpg" alt="Mrs. Tomisin Jacob Regal Birthday Flyer" class="card-img">
+                <img src="Tomisin Jacob 2.jpg" alt="Mrs. Tomisin Jacob Regal Birthday Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Mrs. Tomisin Jacob Ember Aesthetic</h3>
                     <p>Rich, high-warmth copper and bronze celebration layout.</p>
@@ -393,16 +385,15 @@
             </div>
 
             <div class="work-card" data-category="memorials">
-                <img src="forever in our hearts.jpg" alt="Late Deaconess Faith Omozele Funeral Program" class="card-img">
+                <img src="forever in our hearts.jpg" alt="Late Deaconess Faith Omozele Funeral Program" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Funeral & Burial Arrangement Banner</h3>
                     <p>Respectful memorial banner layout.</p>
                 </div>
             </div>
 
-            <!-- ====== Added from HTML3 (birthday/family/memorial) ====== -->
             <div class="work-card" data-category="memorials">
-                <img src="invitation card.jpg" alt="Burial Arrangement Invitation" class="card-img">
+                <img src="invitation card.jpg" alt="Burial Arrangement Invitation" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Burial Arrangement Invitation</h3>
                     <p>Funeral invitation asset from HTML3.</p>
@@ -410,23 +401,15 @@
             </div>
 
             <div class="work-card" data-category="birthdays">
-                <img src="kelly lyon.jpg" alt="Kelly Lyon Father's Day Tribute" class="card-img">
+                <img src="kelly lyon.jpg" alt="Kelly Lyon Father's Day Tribute" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Father's Day Tribute Flyer</h3>
                     <p>High-key Father's Day composition.</p>
                 </div>
             </div>
 
-            <div class="work-card" data-category="birthdays">
-                <img src="kelly lyon 2.jpg" alt="Happy Father's Day - Kelly Lyon" class="card-img">
-                <div class="card-meta">
-                    <h3>Father's Day Grid Flyer</h3>
-                    <p>Father's Day grid variant.</p>
-                </div>
-            </div>
-
             <div class="work-card" data-category="memorials">
-                <img src="Late Ichie Ezinna Emmanuel Chukwukere Anyanwu 2.jpg" alt="Transition to Glory" class="card-img">
+                <img src="Late Ichie Ezinna Emmanuel Chukwukere Anyanwu 2.jpg" alt="Transition to Glory" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Transition to Glory Memorial</h3>
                     <p>Memorial poster from HTML3.</p>
@@ -434,7 +417,7 @@
             </div>
 
             <div class="work-card" data-category="birthdays">
-                <img src="laura aziz.jpg" alt="Happy Birthday Laura Aziz Jimoh" class="card-img">
+                <img src="laura aziz.jpg" alt="Happy Birthday Laura Aziz Jimoh" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Laura Aziz Birthday Poster</h3>
                     <p>Personal birthday design.</p>
@@ -442,7 +425,7 @@
             </div>
 
             <div class="work-card" data-category="families">
-                <img src="C&V 3.jpg" alt="Chinonso and Victor Wedding Canvas Grid" class="card-img">
+                <img src="C&V 3.jpg" alt="Chinonso and Victor Wedding Canvas Grid" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Chinonso & Victor Wedding Collage</h3>
                     <p>Wedding story photo collage grid.</p>
@@ -450,7 +433,7 @@
             </div>
 
             <div class="work-card" data-category="families">
-                <img src="baby boy ekpo.jpg" alt="Baby Boy Ekpo Arrival Congratulations" class="card-img">
+                <img src="baby boy ekpo.jpg" alt="Baby Boy Ekpo Arrival Congratulations" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Baby Boy Ekpo Announcement</h3>
                     <p>Newborn announcement poster.</p>
@@ -458,7 +441,7 @@
             </div>
 
             <div class="work-card" data-category="families">
-                <img src="baby dedication.jpg" alt="Baby Dedication" class="card-img">
+                <img src="baby dedication.jpg" alt="Baby Dedication" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Baby Dedication Ceremonial Flyer</h3>
                     <p>Dedication flyer asset.</p>
@@ -466,7 +449,7 @@
             </div>
 
             <div class="work-card" data-category="families">
-                <img src="baby goes to church.jpg" alt="Baby Goes to Church" class="card-img">
+                <img src="baby goes to church.jpg" alt="Baby Goes to Church" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Baby Thanksgiving Service Design</h3>
                     <p>Baby thanksgiving poster layout.</p>
@@ -474,7 +457,7 @@
             </div>
 
             <div class="work-card" data-category="families">
-                <img src="baby shower.jpg" alt="Baby Shower Invitation" class="card-img">
+                <img src="baby shower.jpg" alt="Baby Shower Invitation" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Baby Shower Invitation</h3>
                     <p>Shower invitation card design.</p>
@@ -482,17 +465,12 @@
             </div>
 
         </div>
-
-        <div class="view-toggle">
-            <button class="view-toggle-btn" data-section="birthday">Show More</button>
-        </div>
     </section>
 
-    <!-- Section 3: Campaigns & Event Flyers -->
+    <!-- Section: Event -->
     <section class="portfolio-section" id="event">
         <h2>Campaigns & Event Flyers</h2>
         <p class="section-desc">High-impact event flyers, countdown campaigns, and dynamic media layouts designed to captivate audiences.</p>
-        
         <div class="filter-controls">
             <button class="filter-btn active" data-filter="all" data-section="event">All Works</button>
             <button class="filter-btn" data-filter="countdown" data-section="event">Countdown Campaigns</button>
@@ -502,7 +480,7 @@
 
         <div class="portfolio-grid" data-section="event">
             <div class="work-card" data-category="tutorial">
-                <img src="7 days graphic design tutorials_2.jpg" alt="4 Days Graphic Design Tutorial Postponed Announcement" class="card-img">
+                <img src="7 days graphic design tutorials_2.jpg" alt="4 Days Graphic Design Tutorial Postponed Announcement" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Graphic Design Tutorial Update</h3>
                     <p>High-visibility announcement graphic utilizing layered software iconography, crisp registration links, and an authoritative "Postponed" stamp overlay.</p>
@@ -510,7 +488,7 @@
             </div>
 
             <div class="work-card" data-category="tutorial">
-                <img src="7 days graphic design tutorials.jpg" alt="7 Days Graphic Design Tutorials" class="card-img">
+                <img src="7 days graphic design tutorials.jpg" alt="7 Days Graphic Design Tutorials" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Graphic Design Tutorial Campaign</h3>
                     <p>Dynamic and educational aesthetic utilizing bold technical block text layouts and modern content formatting for high digital engagement.</p>
@@ -518,15 +496,15 @@
             </div>
 
             <div class="work-card" data-category="countdown">
-                <img src="0 day to go.jpg" alt="0 Day to Go Countdown Flyer" class="card-img">
+                <img src="0 day to go.jpg" alt="0 Day to Go Countdown Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
-                    <h33>0 Day to Go Climax Launch</h33>
+                    <h3>0 Day to Go Climax Launch</h3>
                     <p>High-energy visual exclamation campaign leveraging peak atmospheric contrast and cinematic lighting to drive immediate launch momentum.</p>
                 </div>
             </div>
 
             <div class="work-card" data-category="countdown">
-                <img src="7 days to go.jpg" alt="7 Days to Go Countdown Flyer" class="card-img">
+                <img src="7 days to go.jpg" alt="7 Days to Go Countdown Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>7 Days to Go Campaign Countdown</h3>
                     <p>Thematic milestone asset featuring a centralized architectural numerical layout over a balanced atmospheric depth gradient.</p>
@@ -534,7 +512,7 @@
             </div>
 
             <div class="work-card" data-category="countdown">
-                <img src="8 DAYS TO GO.jpg" alt="8 Days to Go Countdown" class="card-img">
+                <img src="8 DAYS TO GO.jpg" alt="8 Days to Go Countdown" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>8 Days to Go Campaign</h3>
                     <p>A majestic golden architectural "8" embedded over an atmospheric misty cityscape. Masterful lighting and landscape integration.</p>
@@ -542,7 +520,7 @@
             </div>
 
             <div class="work-card" data-category="countdown">
-                <img src="7 DAYS TO GO.jpg" alt="7 Days to Go Countdown Flyer" class="card-img">
+                <img src="7 DAYS TO GO.jpg" alt="7 Days to Go Countdown Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>7 Days to Go Campaign</h3>
                     <p>An epic historical warrior compositing theme for event countdowns, building suspense with high-contrast cinematic lightning and flames.</p>
@@ -550,7 +528,7 @@
             </div>
 
             <div class="work-card" data-category="countdown">
-                <img src="6 DAYS TO GO.jpg" alt="6 Days to Go Countdown Flyer" class="card-img">
+                <img src="6 DAYS TO GO.jpg" alt="6 Days to Go Countdown Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>6 Days to Go Campaign</h3>
                     <p>A striking aviation and transit conceptual countdown graphic utilizing warm golden-hour lighting blending techniques.</p>
@@ -558,16 +536,15 @@
             </div>
 
             <div class="work-card" data-category="rescue">
-                <img src="Rescue mission week.jpg" alt="Rescue Mission Week Flyer" class="card-img">
+                <img src="Rescue mission week.jpg" alt="Rescue Mission Week Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Rescue Mission Week</h3>
                     <p>Cinematic, military-themed event graphic utilizing intense ambient grading and sharp metallic typography choices.</p>
                 </div>
             </div>
 
-            <!-- ====== Added from HTML2 (Campaigns & Advocacy) ====== -->
             <div class="work-card" data-category="campaign">
-                <img src="echelon diamond.jpg" alt="Echelon Diamond Sponsorship" class="card-img">
+                <img src="echelon diamond.jpg" alt="Echelon Diamond Sponsorship" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Echelon Diamond Sponsorship</h3>
                     <p>Tiered sponsorship poster for large conference campaigns.</p>
@@ -575,7 +552,7 @@
             </div>
 
             <div class="work-card" data-category="campaign">
-                <img src="diamond legacy.jpg" alt="Diamond Legacy Sponsorship" class="card-img">
+                <img src="diamond legacy.jpg" alt="Diamond Legacy Sponsorship" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Diamond Legacy Sponsorship</h3>
                     <p>Luxury campaign sponsorship mockup.</p>
@@ -583,7 +560,7 @@
             </div>
 
             <div class="work-card" data-category="campaign">
-                <img src="Diamond Radiance.jpg" alt="Diamond Radiance Sponsorship" class="card-img">
+                <img src="Diamond Radiance.jpg" alt="Diamond Radiance Sponsorship" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Diamond Radiance Sponsorship</h3>
                     <p>Mid-tier sponsorship campaign asset.</p>
@@ -591,7 +568,7 @@
             </div>
 
             <div class="work-card" data-category="campaign">
-                <img src="diamond horizon.jpg" alt="Diamond Horizon Sponsorship" class="card-img">
+                <img src="diamond horizon.jpg" alt="Diamond Horizon Sponsorship" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Diamond Horizon Sponsorship</h3>
                     <p>Entry-tier sponsorship visual.</p>
@@ -599,7 +576,7 @@
             </div>
 
             <div class="work-card" data-category="campaign">
-                <img src="cm 2.jpg" alt="1 Million Meals Campaign Inner City Mission" class="card-img">
+                <img src="cm 2.jpg" alt="1 Million Meals Campaign Inner City Mission" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Central Missions - Sponsorship Banner</h3>
                     <p>Campaign collateral for indigent children sponsorship.</p>
@@ -607,7 +584,7 @@
             </div>
 
             <div class="work-card" data-category="campaign">
-                <img src="Bro Praise Okoh.jpg" alt="Gold Sponsor Poster" class="card-img">
+                <img src="Bro Praise Okoh.jpg" alt="Gold Sponsor Poster" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Gold Sponsor Certificate Poster</h3>
                     <p>Sponsor recognition poster.</p>
@@ -615,16 +592,15 @@
             </div>
 
             <div class="work-card" data-category="campaign">
-                <img src="Bro. Ehis Aigbe.jpg" alt="Healing Streams Ambassador Campaign" class="card-img">
+                <img src="Bro. Ehis Aigbe.jpg" alt="Healing Streams Ambassador Campaign" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Healing Streams Ambassador Campaign</h3>
                     <p>Ambassador campaign identity poster.</p>
                 </div>
             </div>
 
-            <!-- ====== Added from HTML3 (misc event & promo) ====== -->
             <div class="work-card wide" data-category="countdown">
-                <img src="main front 10 by 7.jpg" alt="Main Front Banner (10x7)" class="card-img">
+                <img src="main front 10 by 7.jpg" alt="Main Front Banner (10x7)" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Main Front Banner (10x7)</h3>
                     <p>Large front banner layout used for main event displays.</p>
@@ -632,7 +608,7 @@
             </div>
 
             <div class="work-card" data-category="tutorial">
-                <img src="official book launch.jpg" alt="Official Book Launch Poster" class="card-img">
+                <img src="official book launch.jpg" alt="Official Book Launch Poster" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Official Book Launch Poster</h3>
                     <p>Book launch promotional poster from HTML3 gallery.</p>
@@ -640,7 +616,7 @@
             </div>
 
             <div class="work-card" data-category="event">
-                <img src="impossible is nothing.jpg" alt="Impossible is Nothing Motivational Graphic" class="card-img">
+                <img src="impossible is nothing.jpg" alt="Impossible is Nothing Motivational Graphic" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Motivational Typography</h3>
                     <p>Motivational typographic asset for event promotions.</p>
@@ -648,7 +624,7 @@
             </div>
 
             <div class="work-card" data-category="event">
-                <img src="innercity awards.jpg" alt="Inner-City Ambassadors Awards" class="card-img">
+                <img src="innercity awards.jpg" alt="Inner-City Ambassadors Awards" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Inner-City Ambassadors Awards</h3>
                     <p>Awards ceremony promotional poster.</p>
@@ -656,17 +632,12 @@
             </div>
 
         </div>
-
-        <div class="view-toggle">
-            <button class="view-toggle-btn" data-section="event">Show More</button>
-        </div>
     </section>
 
-    <!-- Section 4: Corporate Graphics & Print Layouts -->
+    <!-- Section: Corporate -->
     <section class="portfolio-section" id="corporate">
         <h2>Corporate Graphics & Print Layouts</h2>
         <p class="section-desc">Custom print layout solutions, corporate training summit flyers, ticket print lines, and recognition profiles built with sharp grid metrics.</p>
-        
         <div class="filter-controls">
             <button class="filter-btn active" data-filter="all" data-section="corporate">All Works</button>
             <button class="filter-btn" data-filter="corporate-design" data-section="corporate">Corporate Design</button>
@@ -676,7 +647,7 @@
 
         <div class="portfolio-grid" data-section="corporate">
             <div class="work-card" data-category="print-layouts">
-                <img src="7 days days of prayer and fasting ticket size_2.jpg" alt="7 Days of Prayer and Fasting Landscape Banner" class="card-img">
+                <img src="7 days days of prayer and fasting ticket size_2.jpg" alt="7 Days of Prayer and Fasting Landscape Banner" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>7 Days of Prayer & Fasting (Landscape Banner)</h3>
                     <p>Wide-format digital banner optimizing spatial tracking for main speaker profiles, streaming platform icons, and modern background styling elements.</p>
@@ -684,7 +655,7 @@
             </div>
 
             <div class="work-card" data-category="print-layouts">
-                <img src="7 days days of prayer and fasting ticket size.jpg" alt="Prayer and Fasting Print Ticket Layout" class="card-img">
+                <img src="7 days days of prayer and fasting ticket size.jpg" alt="Prayer and Fasting Print Ticket Layout" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Service Entry Ticket Pre-Press Layout</h3>
                     <p>Commercial print-line ticket system maximizing data layout clarity, edge bleeds, and micro-typography formatting for quick physical verification.</p>
@@ -692,7 +663,7 @@
             </div>
 
             <div class="work-card" data-category="profiles">
-                <img src="Gov Udo Nsikak-Wealth.jpg" alt="Governor Udo Nsikak-Wealth Gold Partner Profile" class="card-img">
+                <img src="Gov Udo Nsikak-Wealth.jpg" alt="Governor Udo Nsikak-Wealth Gold Partner Profile" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Gold Partner Recognition Profile</h3>
                     <p>An elegant ceremonial gold profile card design utilizing clean border accents, structural ribbon mockups, and realistic metal badges.</p>
@@ -700,7 +671,7 @@
             </div>
 
             <div class="work-card" data-category="profiles">
-                <img src="Pst Josephine.jpg" alt="Pastor Josephine Wonder Partner Profile" class="card-img">
+                <img src="Pst Josephine.jpg" alt="Pastor Josephine Wonder Partner Profile" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Wonder Partner Identity Profile</h3>
                     <p>Premium silver-bordered circular frame profile concept tailored for digital recognition rosters, maintaining excellent skin tone lighting balances.</p>
@@ -708,7 +679,7 @@
             </div>
 
             <div class="work-card" data-category="print-layouts">
-                <img src="ticket for free food 2.jpg" alt="Free Food Ticket Print Layout" class="card-img">
+                <img src="ticket for free food 2.jpg" alt="Free Food Ticket Print Layout" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Free Food Ticket Print Layout</h3>
                     <p>A full commercial pre-press print layout featuring package vector icons, explicit product vector mockups, and vertical barcode margins.</p>
@@ -716,16 +687,15 @@
             </div>
 
             <div class="work-card" data-category="corporate-design">
-                <img src="call center official training meeting.jpg" alt="Call Centre Stakeholders Summit" class="card-img">
+                <img src="call center official training meeting.jpg" alt="Call Centre Stakeholders Summit" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Call Centre Stakeholders Summit</h3>
                     <p>Corporate banner for stakeholder training and summit use.</p>
                 </div>
             </div>
 
-            <!-- ====== Added from HTML2 (Corporate Hiring & Branding) ====== -->
             <div class="work-card" data-category="corporate-design">
-                <img src="HR General.jpg" alt="We Are Hiring HR Generalist Flyer" class="card-img">
+                <img src="HR General.jpg" alt="We Are Hiring HR Generalist Flyer" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>HR General - Recruitment Campaign</h3>
                     <p>Recruitment flyer for corporate hiring.</p>
@@ -733,7 +703,7 @@
             </div>
 
             <div class="work-card" data-category="corporate-design">
-                <img src="Head, Corporate & Commercial Banking.jpg" alt="Head Corporate and Commercial Banking Vacancy" class="card-img">
+                <img src="Head, Corporate & Commercial Banking.jpg" alt="Head Corporate and Commercial Banking Vacancy" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Head, Corporate & Commercial Banking</h3>
                     <p>Senior-level vacancy poster layout.</p>
@@ -741,7 +711,7 @@
             </div>
 
             <div class="work-card" data-category="corporate-design">
-                <img src="Head, Dedicated Banking.jpg" alt="Head Dedicated Banking Recruitment Banner" class="card-img">
+                <img src="Head, Dedicated Banking.jpg" alt="Head Dedicated Banking Recruitment Banner" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Head, Dedicated Banking Vacancy</h3>
                     <p>Recruitment banner design for banking role.</p>
@@ -749,32 +719,23 @@
             </div>
 
             <div class="work-card" data-category="corporate-design">
-                <img src="HEAD, STRATEGY & CORPORATE PLANNING.jpg" alt="Head Strategy Corporate Planning Vacancy" class="card-img">
+                <img src="HEAD, STRATEGY & CORPORATE PLANNING.jpg" alt="Head Strategy Corporate Planning Vacancy" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Head, Strategy & Corporate Planning</h3>
                     <p>Strategic role recruitment marketing asset.</p>
                 </div>
             </div>
 
-            <!-- ====== Added from HTML3 (Product/branding images) ====== -->
             <div class="work-card" data-category="corporate-design">
-                <img src="inside the board 12.5 by 4.jpg" alt="Hydro Bistro Menu Banner" class="card-img">
+                <img src="inside the board 12.5 by 4.jpg" alt="Hydro Bistro Menu Banner" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Hydro Bistro Menu Banner</h3>
                     <p>Restaurant menu board banner layout.</p>
                 </div>
             </div>
 
-            <div class="work-card" data-category="corporate-design">
-                <img src="inside the board 12.5 by 4.jpg" alt="Hydro Bistro Menu Banner variant" class="card-img">
-                <div class="card-meta">
-                    <h3>Hydro Bistro - alternate</h3>
-                    <p>Alternate layout for menu banner (HTML3).</p>
-                </div>
-            </div>
-
             <div class="work-card" data-category="print-layouts">
-                <img src="ojo special bread.jpg" alt="Ojo Special Bread Product Layout 1" class="card-img">
+                <img src="ojo special bread.jpg" alt="Ojo Special Bread Product Layout 1" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Ojo Special Bread - Product Layout</h3>
                     <p>Food product layout for packaging/promotion.</p>
@@ -782,7 +743,7 @@
             </div>
 
             <div class="work-card" data-category="print-layouts">
-                <img src="ojo special bread 2.jpg" alt="Ojo Special Bread - Layout 2" class="card-img">
+                <img src="ojo special bread 2.jpg" alt="Ojo Special Bread - Layout 2" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Ojo Special Bread (Layout 2)</h3>
                     <p>Alternate product layout for bakery brand.</p>
@@ -790,7 +751,7 @@
             </div>
 
             <div class="work-card" data-category="corporate-design">
-                <img src="ojo special bread logo.png" alt="Ojo Special Bread Brand Logo" class="card-img">
+                <img src="ojo special bread logo.png" alt="Ojo Special Bread Brand Logo" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Ojo Special Bread - Brand Logo</h3>
                     <p>Logo asset for bakery business.</p>
@@ -798,7 +759,7 @@
             </div>
 
             <div class="work-card" data-category="corporate-design">
-                <img src="ojo special Cakes and pastries.jpg" alt="Ojo Special Cakes and Pastries Showcase" class="card-img">
+                <img src="ojo special Cakes and pastries.jpg" alt="Ojo Special Cakes and Pastries Showcase" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Cakes & Pastries Showcase</h3>
                     <p>Product showcase assembly for bakery.</p>
@@ -806,7 +767,7 @@
             </div>
 
             <div class="work-card" data-category="corporate-design">
-                <img src="Gift bag design.jpg" alt="ReachOut World Day Gift Bag Mockup" class="card-img">
+                <img src="Gift bag design.jpg" alt="ReachOut World Day Gift Bag Mockup" class="card-img" loading="lazy">
                 <div class="card-meta">
                     <h3>Promotional Gift Bag Layout</h3>
                     <p>Merchandising mockup for an event.</p>
@@ -814,13 +775,9 @@
             </div>
 
         </div>
-
-        <div class="view-toggle">
-            <button class="view-toggle-btn" data-section="corporate">Show More</button>
-        </div>
     </section>
 
-    <!-- Footer & Inquiries -->
+    <!-- Footer (we will insert the single gallery above this via JS) -->
     <footer id="contact">
         <h2>Hire Sunday "Kai" Obibi for Your Next Launch</h2>
         <p>Currently accepting corporate branding retainers, publication layouts, and church ministry campaign visual direction contracts globally from Benin City, Nigeria.</p>
@@ -831,274 +788,244 @@
         <p class="footer-note">&copy; 2026 Sunday Obibi. Custom Handcrafted Design System Portfolio.</p>
     </footer>
 
-    <!-- JAVASCRIPT - PORTFOLIO FILTER SYSTEM + LIGHTBOX WITH ADAPTIVE SIZE & GESTURE ZOOM -->
+    <!-- libs -->
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+    <!-- Combined script: shuffle + single gallery + Masonry init + delegated lightbox -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = ['church', 'birthday', 'event', 'corporate'];
-            sections.forEach(section => initializeSection(section));
-            
-            // Initialize lightbox
-            initializeLightbox();
+    document.addEventListener('DOMContentLoaded', () => {
+        // 1. Gather all cards across sections
+        const sourceCards = Array.from(document.querySelectorAll('.work-card'));
+        if (!sourceCards.length) return;
+
+        // 2. Shuffle (Fisher-Yates)
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+        const shuffled = shuffle(sourceCards.slice());
+
+        // 3. Remove existing portfolio sections (heading + filters)
+        document.querySelectorAll('.portfolio-section').forEach(sec => sec.remove());
+
+        // 4. Create single gallery section
+        const gallerySection = document.createElement('section');
+        gallerySection.className = 'portfolio-section';
+        gallerySection.id = 'gallery';
+        gallerySection.innerHTML = `
+            <h2>Gallery</h2>
+            <p class="section-desc">All works — randomized on each load. Click any image to preview.</p>
+            <div class="portfolio-grid" data-section="gallery">
+                <div class="grid-sizer"></div>
+            </div>
+        `;
+        // insert gallery before footer
+        const footer = document.getElementById('contact') || document.querySelector('footer');
+        footer.parentNode.insertBefore(gallerySection, footer);
+
+        const grid = gallerySection.querySelector('.portfolio-grid');
+
+        // 5. Append shuffled cards to the new grid and mark visible
+        shuffled.forEach(card => {
+            // ensure visible and remove old filter-related classes
+            card.classList.add('visible');
+            if (card.parentNode) card.parentNode.removeChild(card);
+            grid.appendChild(card);
         });
 
-        function initializeSection(sectionName) {
-            const grid = document.querySelector(`.portfolio-grid[data-section="${sectionName}"]`);
-            const filterButtons = document.querySelectorAll(`.filter-btn[data-section="${sectionName}"]`);
-            const toggleBtn = document.querySelector(`.view-toggle-btn[data-section="${sectionName}"]`);
-            
-            if (!grid || !filterButtons.length) return;
+        // 6. Init Masonry on the gallery
+        function initMasonryGrid(gridEl) {
+            if (!gridEl.querySelector('.grid-sizer')) {
+                const s = document.createElement('div');
+                s.className = 'grid-sizer';
+                gridEl.insertBefore(s, gridEl.firstChild);
+            }
 
-            const itemsPerPage = 6;
-            let isExpanded = false;
-            let currentFilter = 'all';
-
-            showInitialCards();
-            updateToggleButton();
-
-            filterButtons.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    filterButtons.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    
-                    isExpanded = false;
-                    currentFilter = btn.dataset.filter;
-                    showInitialCards();
-                    updateToggleButton();
-                });
+            const msnry = new Masonry(gridEl, {
+                itemSelector: '.work-card.visible',
+                columnWidth: '.grid-sizer',
+                percentPosition: true,
+                gutter: 28,
+                transitionDuration: '0.36s'
             });
 
-            if (toggleBtn) {
-                toggleBtn.addEventListener('click', () => {
-                    isExpanded = !isExpanded;
-                    showInitialCards();
-                    updateToggleButton();
-                });
-            }
+            imagesLoaded(gridEl, () => msnry.layout());
+            gridEl.msnry = msnry;
+        }
+        initMasonryGrid(grid);
 
-            function showInitialCards() {
-                const allCards = Array.from(grid.querySelectorAll('.work-card'));
-                
-                const filteredCards = allCards.filter(card => {
-                    const category = card.dataset.category;
-                    return currentFilter === 'all' || category === currentFilter;
-                });
+        // 7. Debounced relayout on window resize
+        let rt;
+        window.addEventListener('resize', () => {
+            clearTimeout(rt);
+            rt = setTimeout(() => {
+                if (grid.msnry) imagesLoaded(grid, () => grid.msnry.layout());
+            }, 200);
+        });
 
-                allCards.forEach(card => {
-                    card.classList.remove('visible');
-                });
+        // 8. Delegated lightbox (full features)
+        setupDelegatedLightbox();
 
-                const displayCount = isExpanded ? filteredCards.length : itemsPerPage;
-                filteredCards.slice(0, displayCount).forEach(card => {
-                    card.classList.add('visible');
-                });
-            }
+        // 9. Jump to gallery anchor if the user clicked Gallery in nav
+        // (no-op here; nav links already point to #gallery)
+    });
 
-            function updateToggleButton() {
-                const allCards = grid.querySelectorAll('.work-card');
-                const matchingCards = Array.from(allCards).filter(card => {
-                    const category = card.dataset.category;
-                    return currentFilter === 'all' || category === currentFilter;
-                }).length;
-
-                if (matchingCards <= itemsPerPage) {
-                    toggleBtn.style.display = 'none';
-                } else {
-                    toggleBtn.style.display = 'block';
-                    toggleBtn.textContent = isExpanded ? 'Show Less' : 'Show More';
-                }
-            }
+    // Lightbox implementation (delegated)
+    function setupDelegatedLightbox() {
+        // create lightbox DOM if missing
+        if (!document.querySelector('.lightbox')) {
+            const lightbox = document.createElement('div');
+            lightbox.className = 'lightbox';
+            lightbox.innerHTML = `
+                <div class="lightbox-content">
+                    <button class="lightbox-close" aria-label="Close">&times;</button>
+                    <button class="lightbox-prev" aria-label="Previous">&#10094;</button>
+                    <div class="lightbox-image-wrapper">
+                        <img class="lightbox-img" src="" alt="">
+                    </div>
+                    <button class="lightbox-next" aria-label="Next">&#10095;</button>
+                    <div class="lightbox-info">
+                        <h3></h3>
+                        <p></p>
+                        <div class="lightbox-counter"></div>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(lightbox);
         }
 
-        // LIGHTBOX FUNCTIONALITY WITH ADAPTIVE SIZE & GESTURE/SCROLL ZOOM
-        let currentImageIndex = 0;
-        let allVisibleImages = [];
-        let currentZoom = 1;
+        const lightbox = document.querySelector('.lightbox');
+        const lightboxImg = document.querySelector('.lightbox-img');
+        const lightboxImgWrapper = document.querySelector('.lightbox-image-wrapper');
+        const lightboxTitle = document.querySelector('.lightbox-info h3');
+        const lightboxDesc = document.querySelector('.lightbox-info p');
+        const lightboxCounter = document.querySelector('.lightbox-counter');
+        const closeBtn = document.querySelector('.lightbox-close');
+        const prevBtn = document.querySelector('.lightbox-prev');
+        const nextBtn = document.querySelector('.lightbox-next');
+
+        let currentIndex = 0;
+        let visibleList = [];
+        let zoom = 1;
         let touchDistance = 0;
 
-        function initializeLightbox() {
-            // Create lightbox HTML if it doesn't exist
-            if (!document.querySelector('.lightbox')) {
-                const lightbox = document.createElement('div');
-                lightbox.className = 'lightbox';
-                lightbox.innerHTML = `
-                    <div class="lightbox-content">
-                        <button class="lightbox-close">&times;</button>
-                        <button class="lightbox-prev">&#10094;</button>
-                        <div class="lightbox-image-wrapper">
-                            <img class="lightbox-img" src="" alt="">
-                        </div>
-                        <button class="lightbox-next">&#10095;</button>
-                        <div class="lightbox-info">
-                            <h3></h3>
-                            <p></p>
-                            <div class="lightbox-counter"></div>
-                        </div>
-                    </div>
-                `;
-                document.body.appendChild(lightbox);
+        document.body.addEventListener('click', (e) => {
+            // avoid opening when clicking navigation links
+            if (e.target.closest('nav')) return;
+            const card = e.target.closest('.work-card');
+            if (!card) return;
+
+            visibleList = Array.from(document.querySelectorAll('.work-card.visible'));
+            if (!visibleList.includes(card)) {
+                visibleList = Array.from(document.querySelectorAll('.work-card'));
             }
 
-            const lightbox = document.querySelector('.lightbox');
-            const lightboxImg = document.querySelector('.lightbox-img');
-            const lightboxImgWrapper = document.querySelector('.lightbox-image-wrapper');
-            const lightboxTitle = document.querySelector('.lightbox-info h3');
-            const lightboxDesc = document.querySelector('.lightbox-info p');
-            const lightboxCounter = document.querySelector('.lightbox-counter');
-            const closeBtn = document.querySelector('.lightbox-close');
-            const prevBtn = document.querySelector('.lightbox-prev');
-            const nextBtn = document.querySelector('.lightbox-next');
+            currentIndex = visibleList.indexOf(card);
+            if (currentIndex === -1) return;
 
-            // Click on cards to open lightbox
-            document.querySelectorAll('.work-card').forEach((card, index) => {
-                card.addEventListener('click', () => {
-                    // Get all visible cards from all sections
-                    allVisibleImages = Array.from(document.querySelectorAll('.work-card.visible'));
-                    currentImageIndex = allVisibleImages.indexOf(card);
-                    currentZoom = 1;
+            zoom = 1;
+            open(currentIndex);
+            lightbox.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        });
 
-                    openLightboxImage(currentImageIndex);
-                    lightbox.classList.add('open');
-                    document.body.style.overflow = 'hidden';
-                });
-            });
+        function open(index) {
+            if (!visibleList.length) return;
+            const card = visibleList[index];
+            const img = card.querySelector('.card-img');
+            const meta = card.querySelector('.card-meta');
+            const title = meta && meta.querySelector('h3') ? meta.querySelector('h3').textContent : '';
+            const desc = meta && meta.querySelector('p') ? meta.querySelector('p').textContent : '';
 
-            function openLightboxImage(index) {
-                if (allVisibleImages.length === 0) return;
+            lightboxImg.src = img ? img.src : '';
+            lightboxImg.alt = img ? img.alt : '';
+            lightboxImg.style.transform = `scale(${zoom})`;
+            lightboxTitle.textContent = title;
+            lightboxDesc.textContent = desc;
+            lightboxCounter.textContent = `${index + 1} / ${visibleList.length}`;
 
-                const card = allVisibleImages[index];
-                const img = card.querySelector('.card-img');
-                const meta = card.querySelector('.card-meta');
-                const title = meta.querySelector('h3').textContent;
-                const desc = meta.querySelector('p').textContent;
+            prevBtn.style.display = visibleList.length > 1 ? 'block' : 'none';
+            nextBtn.style.display = visibleList.length > 1 ? 'block' : 'none';
+        }
 
-                lightboxImg.src = img.src;
-                lightboxImg.alt = img.alt;
-                lightboxImg.style.transform = `scale(${currentZoom})`;
-                lightboxTitle.textContent = title;
-                lightboxDesc.textContent = desc;
-                lightboxCounter.textContent = `${index + 1} / ${allVisibleImages.length}`;
+        prevBtn.addEventListener('click', (ev) => {
+            ev.stopPropagation();
+            currentIndex = (currentIndex - 1 + visibleList.length) % visibleList.length;
+            zoom = 1;
+            open(currentIndex);
+        });
 
-                // Show/hide navigation buttons
-                prevBtn.style.display = allVisibleImages.length > 1 ? 'block' : 'none';
-                nextBtn.style.display = allVisibleImages.length > 1 ? 'block' : 'none';
-            }
+        nextBtn.addEventListener('click', (ev) => {
+            ev.stopPropagation();
+            currentIndex = (currentIndex + 1) % visibleList.length;
+            zoom = 1;
+            open(currentIndex);
+        });
 
-            // Navigation
-            prevBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                currentImageIndex = (currentImageIndex - 1 + allVisibleImages.length) % allVisibleImages.length;
-                currentZoom = 1;
-                openLightboxImage(currentImageIndex);
-            });
+        closeBtn.addEventListener('click', () => {
+            lightbox.classList.remove('open');
+            document.body.style.overflow = 'auto';
+        });
 
-            nextBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                currentImageIndex = (currentImageIndex + 1) % allVisibleImages.length;
-                currentZoom = 1;
-                openLightboxImage(currentImageIndex);
-            });
-
-            // Keyboard navigation and zoom
-            document.addEventListener('keydown', (e) => {
-                if (!lightbox.classList.contains('open')) return;
-                
-                if (e.key === 'ArrowLeft') {
-                    currentImageIndex = (currentImageIndex - 1 + allVisibleImages.length) % allVisibleImages.length;
-                    currentZoom = 1;
-                    openLightboxImage(currentImageIndex);
-                } else if (e.key === 'ArrowRight') {
-                    currentImageIndex = (currentImageIndex + 1) % allVisibleImages.length;
-                    currentZoom = 1;
-                    openLightboxImage(currentImageIndex);
-                } else if (e.key === '+' || e.key === '=') {
-                    e.preventDefault();
-                    if (currentZoom < 3) {
-                        currentZoom += 0.2;
-                        lightboxImg.style.transform = `scale(${currentZoom})`;
-                    }
-                } else if (e.key === '-') {
-                    e.preventDefault();
-                    if (currentZoom > 0.5) {
-                        currentZoom -= 0.2;
-                        lightboxImg.style.transform = `scale(${currentZoom})`;
-                    }
-                }
-            });
-
-            // Mouse wheel zoom
-            lightboxImgWrapper.addEventListener('wheel', (e) => {
-                e.preventDefault();
-                if (e.deltaY < 0) {
-                    // Scroll up - zoom in
-                    if (currentZoom < 3) {
-                        currentZoom += 0.2;
-                        lightboxImg.style.transform = `scale(${currentZoom})`;
-                    }
-                } else {
-                    // Scroll down - zoom out
-                    if (currentZoom > 0.5) {
-                        currentZoom -= 0.2;
-                        lightboxImg.style.transform = `scale(${currentZoom})`;
-                    }
-                }
-            }, { passive: false });
-
-            // Touch gesture zoom (pinch)
-            lightboxImgWrapper.addEventListener('touchstart', (e) => {
-                if (e.touches.length === 2) {
-                    const touch1 = e.touches[0];
-                    const touch2 = e.touches[1];
-                    const dx = touch1.clientX - touch2.clientX;
-                    const dy = touch1.clientY - touch2.clientY;
-                    touchDistance = Math.sqrt(dx * dx + dy * dy);
-                }
-            });
-
-            lightboxImgWrapper.addEventListener('touchmove', (e) => {
-                if (e.touches.length === 2) {
-                    e.preventDefault();
-                    const touch1 = e.touches[0];
-                    const touch2 = e.touches[1];
-                    const dx = touch1.clientX - touch2.clientX;
-                    const dy = touch1.clientY - touch2.clientY;
-                    const newDistance = Math.sqrt(dx * dx + dy * dy);
-                    
-                    const scale = newDistance / touchDistance;
-                    
-                    if (scale > 1.05 && currentZoom < 3) {
-                        currentZoom += 0.1;
-                        lightboxImg.style.transform = `scale(${currentZoom})`;
-                        touchDistance = newDistance;
-                    } else if (scale < 0.95 && currentZoom > 0.5) {
-                        currentZoom -= 0.1;
-                        lightboxImg.style.transform = `scale(${currentZoom})`;
-                        touchDistance = newDistance;
-                    }
-                }
-            }, { passive: false });
-
-            // Close lightbox
-            closeBtn.addEventListener('click', () => {
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
                 lightbox.classList.remove('open');
                 document.body.style.overflow = 'auto';
-            });
+            }
+        });
 
-            // Close on background click
-            lightbox.addEventListener('click', (e) => {
-                if (e.target === lightbox) {
-                    lightbox.classList.remove('open');
-                    document.body.style.overflow = 'auto';
-                }
-            });
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('open')) return;
+            if (e.key === 'ArrowLeft') {
+                currentIndex = (currentIndex - 1 + visibleList.length) % visibleList.length;
+                zoom = 1;
+                open(currentIndex);
+            } else if (e.key === 'ArrowRight') {
+                currentIndex = (currentIndex + 1) % visibleList.length;
+                zoom = 1;
+                open(currentIndex);
+            } else if (e.key === '+' || e.key === '=') {
+                e.preventDefault();
+                if (zoom < 3) { zoom += 0.2; lightboxImg.style.transform = `scale(${zoom})`; }
+            } else if (e.key === '-') {
+                e.preventDefault();
+                if (zoom > 0.5) { zoom -= 0.2; lightboxImg.style.transform = `scale(${zoom})`; }
+            } else if (e.key === 'Escape') {
+                lightbox.classList.remove('open');
+                document.body.style.overflow = 'auto';
+            }
+        });
 
-            // Close on ESC key
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && lightbox.classList.contains('open')) {
-                    lightbox.classList.remove('open');
-                    document.body.style.overflow = 'auto';
-                }
-            });
-        }
+        lightboxImgWrapper.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            if (e.deltaY < 0) { if (zoom < 3) { zoom += 0.2; lightboxImg.style.transform = `scale(${zoom})`; } }
+            else { if (zoom > 0.5) { zoom -= 0.2; lightboxImg.style.transform = `scale(${zoom})`; } }
+        }, { passive: false });
+
+        lightboxImgWrapper.addEventListener('touchstart', (e) => {
+            if (e.touches.length === 2) {
+                const dx = e.touches[0].clientX - e.touches[1].clientX;
+                const dy = e.touches[0].clientY - e.touches[1].clientY;
+                touchDistance = Math.sqrt(dx*dx + dy*dy);
+            }
+        });
+
+        lightboxImgWrapper.addEventListener('touchmove', (e) => {
+            if (e.touches.length === 2) {
+                e.preventDefault();
+                const dx = e.touches[0].clientX - e.touches[1].clientX;
+                const dy = e.touches[0].clientY - e.touches[1].clientY;
+                const newDistance = Math.sqrt(dx*dx + dy*dy);
+                const scale = newDistance / touchDistance;
+                if (scale > 1.05 && zoom < 3) { zoom += 0.1; lightboxImg.style.transform = `scale(${zoom})`; touchDistance = newDistance; }
+                else if (scale < 0.95 && zoom > 0.5) { zoom -= 0.1; lightboxImg.style.transform = `scale(${zoom})`; touchDistance = newDistance; }
+            }
+        }, { passive: false });
+    }
     </script>
 
 </body>
